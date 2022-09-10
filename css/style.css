@@ -1,0 +1,289 @@
+:root {
+  --drak-blue: #28283E;
+  --text-clr: hsl(240, 9%, 83%);
+  --download-btn-clr: hsl(192, 54%, 64%);
+  --other-btn-clr: hsl(268, 55%, 71%);
+  --btn-text-clr: hsl(191, 80%, 77%);
+  --btn-text: hsl(268, 95%, 85%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* hero */
+#hero {
+  width: 100%;
+  text-align: center;
+}
+
+.logo {
+  margin: 50px auto;
+}
+
+.hero-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+}
+
+.hero-left-col {
+  flex-basis: 30%;
+  position: relative;
+}
+
+.hero-left-col img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: -2em;
+}
+
+.mobile-img {
+  display: none;
+}
+
+.hero-middle-col {
+  flex-basis: 45%;
+}
+
+.hero-middle-col h1 {
+  color: var(--drak-blue);
+  font-size: 3.2em;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.hero-middle-col p {
+  color: var(--drak-blue);
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.hero-right-col {
+  flex-basis: 30%;
+  position: relative;
+}
+
+.hero-right-col img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: -2em;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 11px 25px;
+  border-radius: 30px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 80%;
+}
+
+.download-btn {
+  background-color: var(--download-btn-clr);
+  margin-right: 10px;
+}
+
+.download-btn span {
+  color: var(--btn-text-clr);
+}
+
+.other-btn {
+  background-color: var(--other-btn-clr);
+}
+
+.number-1 {
+  margin: 90px 0;
+  text-align: center;
+}
+
+.line {
+  height: 70px;
+  width: 1px;
+  background-color: var(--text-clr);
+  margin: auto;
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid var(--text-clr);
+  margin: auto;
+  color: var(--text-clr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* images */
+.images {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 15px;
+  margin-bottom: 90px;
+}
+
+.images img {
+  border-radius: 10px;
+  width: 190px;
+}
+
+.image-1 {
+  grid-area: 1 / 1;
+}
+
+.image-2 {
+  grid-area: 1 / 2;
+}
+
+.image-3 {
+  grid-area: 1 / 3;
+}
+
+.image-4 {
+  grid-area: 1 / 4;
+}
+
+/* cta */
+.cta {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.cta h3 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--download-btn-clr);
+  margin-bottom: 25px;
+}
+
+.cta h1 {
+  font-size: 2.5em;
+  margin-bottom: 25px;
+  line-height: 1.1;
+  color: var(--drak-blue);
+}
+
+.cta p {
+  color: var(--drak-blue);
+  font-size: 15px;
+}
+
+.number-2 {
+  text-align: center;
+  margin-top: 70px;
+}
+
+#footer {
+  background-color: var(--download-btn-clr);
+  padding: 80px 0;
+  width: 100%;
+  color: #fff;
+}
+
+.footer-row {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.footer-left-col {
+  flex: 1;
+  margin-bottom: 50px;
+}
+
+.footer-middle-col {
+  flex: 1;
+  margin-bottom: 50px;
+}
+
+.footer-right-col {
+  flex: 1;
+  margin-bottom: 50px;
+}
+
+.footer-right-col button {
+  background-color: var(--other-btn-clr);
+}
+
+.footer-right-col button span {
+  color: var(--btn-text);
+}
+
+@media (max-width: 700px) {
+  .hero-row {
+    flex-direction: column;
+  }
+
+  .desk-img {
+    display: none;
+  }
+
+  .mobile-img {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .hero-left-col {
+    margin-bottom: 200px;
+  }
+
+  .images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+  .images img {
+    border-radius: 10px;
+    width: 140px;
+  }
+  .image-1 {
+    grid-area: 1 / 1;
+  }
+
+  .image-2 {
+    grid-area: 1 / 2;
+  }
+
+  .image-3 {
+    grid-area: 2 / 1;
+  }
+
+  .image-4 {
+    grid-area: 2 / 2;
+  }
+  .cta {
+    width: 90%;
+  }
+  .footer-row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
